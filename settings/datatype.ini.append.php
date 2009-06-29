@@ -1,0 +1,6 @@
+<? /*
+
+[EditSettings]
+GroupedInput[]=bcgmapslocation
+
+*/ ?>

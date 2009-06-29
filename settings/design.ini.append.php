@@ -1,0 +1,6 @@
+<? /*
+
+[ExtensionSettings]
+DesignExtensions[]=bcgmapslocation
+
+*/ ?>
