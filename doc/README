@@ -4,11 +4,36 @@ README
 Plot location points on a custom Google Map
 on your website.
 
+The provided GMapsLocation datatype provides a simple 
+solution for storing latitude / longitude points with-in
+a object by using Google Maps to identify and mark 
+location positions on map using a postal address.
+
+
+INSTALLATION
+============
+
+1. Obtain a Google Maps Key for all domains you'll be using by registering your domains with Google at http://www.google.com/apis/maps/
+
+2. Upload the bcgmapslocation folder to the extensions folder in your eZ Publish installation.
+
+3. Activate the extension from the 'Extensions' portion of the 'Setup' tab in the eZ publish admin interface.
+
+4.) Add your GmapsKey to the bcgmapslocation.ini under [GMapsLocationSettings],
+GMapsKey=<Long string of characters from Google>
+
+
+USING
+=====
+
+To use the extension, add the 'GMaps Location' datatype to your classes using the class editor.
+
+The most common use of the extension is to also Google Maps data on a public-facing web site.
 
 
 CREDITS
 =======
 
-The Google Maps eZ Publish datatype was originally based on the reliable gmaplocation datatype extension from Blend Interactive's Joe Kepley.
+The Google Maps eZ Publish datatype and alternate Google Maps usage examples originally
+based on the reliable gmaplocation datatype extension from Blend Interactive's Joe Kepley.
 
-. 
