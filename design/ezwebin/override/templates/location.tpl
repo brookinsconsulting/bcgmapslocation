@@ -25,7 +25,7 @@
 
 <p>Contact: {$node.data_map.contact.value}</p>
 
-{if $displayMapPointInfoHoursSetting|ne('disabled')}<b>Hours</b>{foreach $childrenLocations as $child}{set $langid=$child.data_map.language.value.0}{set $lang=$locationEventScheduleClass.data_map.language.content.options.$langid}{set $lang=$lang.name}<p>{$child.name}: {$child.data_map.time.value.timestamp|datetime('event_datetime')} ({$lang})</p>{/foreach}{/if}
+{if $displayMapPointInfoHoursSetting|ne('disabled')}<b>Hours</b>{foreach $childrenLocations as $child}{set $langid=$child.data_map.language.value.0}{set $lang=$locationEventScheduleClass.data_map.language.content.options.$langid}{set $lang=$lang.name}<p>{$child.name}: {$child.data_map.time.value.timestamp|datetime('event_datetime')}{if is_set( $child.data_map.end_time.value )} - {$child.data_map.end_time.value.timestamp|datetime('event_datetime')}{/if} ({$lang})</p>{/foreach}{/if}
 
 <p>{$node.data_map.schedule_anomalies.value}</p>
 
