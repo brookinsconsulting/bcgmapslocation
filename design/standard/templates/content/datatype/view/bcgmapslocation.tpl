@@ -1,4 +1,4 @@
-<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key={ezini('SiteSettings','GMapsKey')}" type="text/javascript"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key={ezini('GMapsLocationSettings','GMapsKey','bcgmapslocation.ini')}" type="text/javascript"></script>
 <script type="text/javascript">
 function MapViewer_{$attribute.id}()
 {literal}
@@ -52,9 +52,9 @@ else if (window.attachEvent)
 
 {if and( is_set($attribute.content.latitude), is_set($attribute.content.longitude) )}
 <div class="block">
-<label>Latitude:</label> {$attribute.content.latitude}
-<label>Longitude:</label> {$attribute.content.longitude}
+<label>Location Latitude:</label> {$attribute.content.latitude}
+<label>Location Longitude:</label> {$attribute.content.longitude}
 </div>
 {/if}
-<label>Map:</label>
+<label>Location Map:</label>
 <div id="map_{$attribute.id}" style="width: 240px; height: 150px"></div>

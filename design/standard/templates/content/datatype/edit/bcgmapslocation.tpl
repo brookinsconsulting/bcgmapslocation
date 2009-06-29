@@ -19,7 +19,7 @@
   </div>
 </div>
 <div class="element">
-<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key={ezini('SiteSettings','GMapsKey')}" type="text/javascript"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2.x&amp;key={ezini('GMapsLocationSettings','GMapsKey','bcgmapslocation.ini')}" type="text/javascript"></script>
 <script type="text/javascript">
     function MapControl_{$attribute.id}()
     {literal} 
