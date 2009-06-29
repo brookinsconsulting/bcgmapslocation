@@ -10,6 +10,7 @@
                  $node.node_id,'priority',true() ) )
      $lang=0
      $langid=0
+     $displayMapPointInfoHoursSetting=ezini( 'GMapsLocationSettings', 'LocationDisplayHours', 'bcgmapslocation.ini' )
 }
 <h1>{$node.name}</h1><div style="{if and( is_set( $node.data_map.image.value.data_map.image.value.original ), $node.data_map.image.value.data_map.image.value.original.url|ne('') )}background-image: url({concat('/ezpublish/',$node.data_map.image.value.data_map.image.value.original.url)}); background-repeat: no-repeat; {/if}padding:0px;margin:0px 5px 5px 0px; float:left; display:inline; width:232px; height:304px;">
 </div>
@@ -24,7 +25,7 @@
 
 <p>Contact: {$node.data_map.contact.value}</p>
 
-<b>Hours</b>{foreach $childrenLocations as $child}{set $langid=$child.data_map.language.value.0}{set $lang=$locationEventScheduleClass.data_map.language.content.options.$langid}{set $lang=$lang.name}<p>{$child.name}: {$child.data_map.time.value.timestamp|datetime('event_datetime')} ({$lang})</p>{/foreach}
+{if $displayMapPointInfoHoursSetting|ne('disabled')}<b>Hours</b>{foreach $childrenLocations as $child}{set $langid=$child.data_map.language.value.0}{set $lang=$locationEventScheduleClass.data_map.language.content.options.$langid}{set $lang=$lang.name}<p>{$child.name}: {$child.data_map.time.value.timestamp|datetime('event_datetime')} ({$lang})</p>{/foreach}{/if}
 
 <p>{$node.data_map.schedule_anomalies.value}</p>
 
