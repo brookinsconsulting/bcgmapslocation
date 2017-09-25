@@ -3,7 +3,7 @@
 // Definition of BCGMapsLocationType Class
 //
 // SOFTWARE NAME: BC GMaps Location Class
-// SOFTWARE RELEASE: 0.1.0
+// SOFTWARE RELEASE: 0.1.1
 // COPYRIGHT NOTICE: Copyright (C) 2009 Brookins Consulting
 // SOFTWARE LICENSE: GNU General Public License v2.0 (or later)
 // NOTICE: >
@@ -42,7 +42,7 @@ class BCGMapsLocationType extends eZDataType
     function __construct()
     {
         $this->eZDataType( self::DATA_TYPE_STRING, 
-			   ezi18n( 'extension/bcgmapslocation/datatypes',
+			   ezpI18n::tr( 'extension/bcgmapslocation/datatypes',
 			   "GMaps Location", 'Datatype name' ),
                            array( 'serialize_supported' => true ) );
     }
@@ -64,7 +64,7 @@ class BCGMapsLocationType extends eZDataType
             {
                 if ( !$classAttribute->attribute( 'is_information_collector' ) && $contentObjectAttribute->validateIsRequired() )
                 {
-                    $contentObjectAttribute->setValidationError( ezi18n( 'kernel/classes/datatypes',
+                    $contentObjectAttribute->setValidationError( ezpI18n::tr( 'kernel/classes/datatypes',
                                                                          'Missing Latitude/Longitude input.' ) );
                     return eZInputValidator::STATE_INVALID;
                 }

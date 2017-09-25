@@ -39,11 +39,11 @@ Subdir=templates
 # Match[class_identifier]=folder
 Match[object]=164
 
-[locations_full]
-Source=node/view/full.tpl
-MatchFile=locations.tpl
-Subdir=templates
-# Match[class_identifier]=folder
-# Match[object]=164
+#[locations_full]
+#Source=node/view/full.tpl
+#MatchFile=locations.tpl
+#Subdir=templates
+## Match[class_identifier]=folder
+## Match[object]=164
 
 */ ?>
