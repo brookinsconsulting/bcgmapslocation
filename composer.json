@@ -1,0 +1,24 @@
+{
+    "name": "brookinsconsulting/bcgmapslocation",
+    "description": "eZ Publish Legacy extension which provides a simple solution for storing latitude / longitude points with-in a object by using Google Maps to identify and mark location positions on map using a postal address. Great for smart developers!",
+    "type": "ezpublish-legacy-extension",
+    "keywords": [ "eZ Publish", "eZ Publish Legacy", "eZ Publish Platform", "map", "maps", "extension", "datatype" ],
+    "homepage": "https://github.com/brookinsconsulting/bcgmapslocation",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name" : "Brookins Consulting",
+            "homepage": "http://brookinsconsulting.com",
+            "email": "info@brookinsconsulting.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.0.0",
+        "ezsystems/ezpublish-legacy-installer": "*"
+    },
+    "extra": {
+        "ezpublish-legacy-extension-name": "bcgmapslocation"
+    }
+}
